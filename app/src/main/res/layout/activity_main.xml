@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tv.title"
@@ -124,6 +125,17 @@
         app:layout_constraintStart_toEndOf="@+id/vertical_guideline"
         app:layout_constraintEnd_toEndOf="@+id/til_number_of_people"
         app:layout_constraintTop_toBottomOf="@+id/rg_percentage"/>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_clean"
+        tools:text="57.5"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.tips_calculate"
+    namespace = "com.example.tips_calculatee"
     compileSdk = 35
 
     defaultConfig {

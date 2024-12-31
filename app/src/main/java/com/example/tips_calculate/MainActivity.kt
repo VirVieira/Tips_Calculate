@@ -1,11 +1,13 @@
 package com.example.tips_calculate
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
-import com.example.tips_calculate.databinding.ActivityMainBinding
+import com.example.tips_calculatee.R
+import com.example.tips_calculatee.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
@@ -28,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                 percentage = 15
             }
 
-            binding.rbRboptionThree.setOnCheckedChangeListener { _, isChecked ->
+            binding.rbOptionThree.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) {
                     percentage = 20
                 }
@@ -36,8 +38,10 @@ class MainActivity : AppCompatActivity() {
             val adapater = ArrayAdapter.createFromResource(
                 this,
                 R.array.num_people,
-                android.R.layout.simple_spinner_item
+                android.R.layout.simple_spinner_item,
+
             )
+
 
             adapater.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             binding.spinnerNumberOfPeople.adapter = adapater
@@ -46,14 +50,14 @@ class MainActivity : AppCompatActivity() {
 
             binding.spinnerNumberOfPeople.onItemSelectedListener =
                 object  : AdapterView.OnItemSelectedListener {
-
+                    
                 override fun onItemSelected(
                     parent: AdapterView<*>?,
                     view: View?,
                     position: Int,
                     id: Long
                 ) {
-                    TODO("Not yet implemented")
+                    numOfPeopleSelected = position
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -79,18 +83,30 @@ class MainActivity : AppCompatActivity() {
                 val totalTemp = totalTable / npeople
                 val tips = totalTemp * percentage / 100
                 val totalWithTips = totalTemp + tips
-                binding.tvResult.text = "Total with tips: $totalWithTips"
+
+                val intent = Intent(this, SummaryActivity::class.java)
+                intent.apply {
+                   putExtra("totalTable", totalTable)
+                   putExtra("numPeople", numOfPeopleSelected)
+                   putExtra("percentage", percentage)
+                   putExtra("totalAmount", totalWithTips)
+                }
+                clean()
+                startActivity(intent)
+
             }
 
 
-            binding.btnClean.setOnClickListener {
-                binding.tvResult.text = ""
-                binding.tieTotal.setText("")
-                binding.rbOptionOne.isChecked = false
-                binding.rbOptionTwo.isChecked = false
-                binding.rbRboptionThree.isChecked = false
+            binding.btnDone.setOnClickListener {
+                clean()
 
             }
         }
+    }
+    private fun clean() {
+        binding.tieTotal.setText("")
+        binding.rbOptionOne.isChecked = false
+        binding.rbOptionTwo.isChecked = false
+        binding.rbOptionThree.isChecked = false
     }
 }

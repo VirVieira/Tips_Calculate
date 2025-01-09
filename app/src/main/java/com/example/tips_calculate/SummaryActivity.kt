@@ -1,4 +1,4 @@
-package com.example.tips_calculate
+package com.example.tips_calculatee
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

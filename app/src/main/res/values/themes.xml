@@ -1,11 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Tips_Calculatee" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Tips_Calculate" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
      <item name="colorPrimary">@color/Butterfly</item>
     </style>
 
-    <style name="Theme.Tips_Calculatee" parent="Base.Theme.Tips_Calculatee" />
+    <style name="Theme.Tips_Calculate" parent="Base.Theme.Tips_Calculate" />
     
     <style name="Title" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">32sp</item>

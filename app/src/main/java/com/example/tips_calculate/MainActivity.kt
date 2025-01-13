@@ -1,9 +1,8 @@
-package com.example.tips_calculatee
+package com.example.tips_calculate
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.tips_calculatee.SummaryActivity
 import com.example.tips_calculatee.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
 
@@ -21,11 +20,12 @@ class MainActivity : AppCompatActivity() {
             val numPeopleTemp = binding.tieNumPeople.text
             val percentageTemp = binding.tiePercentage.text
 
-            if (totalTableTemp!!.isEmpty() == true ||
+            if (totalTableTemp?.isEmpty() == true ||
                 numPeopleTemp?.isEmpty() == true ||
                 percentageTemp?.isEmpty() == true
             ) {
-                Snackbar.make(binding.tieTotal, "Preencha todos os Campos", Snackbar.LENGTH_LONG)
+                Snackbar
+                    .make(binding.tieTotal, "Preencha todos os Campos", Snackbar.LENGTH_LONG)
                     .show()
             } else {
                 val totalTable: Float = totalTableTemp.toString().toFloat()
@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity() {
             clean()
         }
     }
+
     private fun clean() {
         binding.tieTotal.setText("")
         binding.tiePercentage.setText("")

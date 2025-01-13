@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tips_Calculatee</string>
+    <string name="app_name">Tips_Calculate</string>
     <string name="summary_subtitle">See bellow the summary of you bill</string>
     <string name="total_table">total table:</string>
     <string name="num_of_people">Num of People:</string>

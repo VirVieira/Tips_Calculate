@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Tips_Calculatee"
+        android:theme="@style/Theme.Tips_Calculate"
         tools:targetApi="31">
         <activity
             android:name="com.example.tips_calculate.SummaryActivity"

@@ -1,8 +1,7 @@
-package com.example.tips_calculatee
+package com.example.tips_calculate
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.tips_calculatee.R
 import com.example.tips_calculatee.databinding.ActivitySummaryBinding
 
 class SummaryActivity : AppCompatActivity() {

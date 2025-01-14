@@ -41,6 +41,7 @@ Transparência: Veja exatamente como os valores são distribuídos.
 º TextInputEditText
 
 #ScreenShots
+
 <img src ="https://github.com/user-attachments/assets/85916224-3f69-4db2-ab68-8daab69d82bb" 
 width = 260/>
 <img src ="https://github.com/user-attachments/assets/dd2c963b-6244-4403-a5fb-a30d197f7add"
